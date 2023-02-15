@@ -2,9 +2,9 @@
 
 ## 구현 스펙
 * [X] 임의의 더미데이터가 삽입되어있는 DB 스키마 구성
-  * Oracle 의 HR 스키마의 더미데이터 사용 ( 데이터 추가 필요 )
-  * 더미데이터 .sql 파일을 받아서 MySQL Workbench로 불러온 뒤 sequelize-auto를 사용하여 models 파일을 생성하였습니다.
-  * DB 스키마는 EER Diagram을 활용하여 png로 추출하였습니다.
+ * Oracle 의 HR 스키마의 더미데이터 사용 ( 데이터 추가 필요 )
+ * 더미데이터 .sql 파일을 받아서 MySQL Workbench로 불러온 뒤 sequelize-auto를 사용하여 models 파일을 생성하였습니다.
+ * DB 스키마는 EER Diagram을 활용하여 png로 추출하였습니다.
 * [ ] API에서 제공하는 기능은 GET/POST 등의 방식의 Method Type을 활용하여 구축할 것
 * [ ] 응답의 Response 규격은 json 혹은 XML 방식으로 구성
 
