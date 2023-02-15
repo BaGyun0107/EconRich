@@ -3,7 +3,7 @@
 ## 구현 스펙
 * [ ] 임의의 더미데이터가 삽입되어있는 DB 스키마 구성
   * Oracle 의 HR 스키마의 더미데이터 사용 ( 데이터 추가 필요 )
-    * https://github.com/nomemory/hr-schema-mysql/blob/master/hr-schemamysql.sql
+    * https://github.com/nomemory/hr-schema-mysql/blob/master/hr-schema-mysql.sql
 * [ ] API에서 제공하는 기능은 GET/POST 등의 방식의 Method Type을 활용하여 구축할 것
 * [ ] 응답의 Response 규격은 json 혹은 XML 방식으로 구성
 
