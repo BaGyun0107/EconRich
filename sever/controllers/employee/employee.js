@@ -18,7 +18,9 @@ const employeesInformation = async (req, res, next) => {
     if (!employees)
       return next(createError(404, "해당 사원은 존재하지 않습니다!"));
 
-    return res.status(200).send({ data: { employees: employees } });
+    return res
+      .status(200)
+      .send({ data: { employees: employees }, message: "사원 정보 조회 성공" });
   } catch (err) {
     next(err);
   }
@@ -40,7 +42,12 @@ const jobHistory = async (req, res, next) => {
     if (jobhistories.length === 0)
       return next(createError(404, "해당 사원의 이력은 존재하지 않습니다."));
 
-    return res.status(200).send({ data: { jobhistories: jobhistories } });
+    return res
+      .status(200)
+      .send({
+        data: { jobhistories: jobhistories },
+        message: "사원 이력 조회 성공",
+      });
   } catch (err) {
     next(err);
   }
