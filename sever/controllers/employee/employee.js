@@ -6,7 +6,7 @@ const createError = require("../../utils/error");
 const { QueryTypes } = require("sequelize");
 const db = require("../../models");
 
-const currentInformation = async (req, res, next) => {
+const employeesInformation = async (req, res, next) => {
   //? 특정 사원의 현재 정보 조회 가능한 API 구현
   try {
     const { id } = req.params;
@@ -46,4 +46,4 @@ const jobHistory = async (req, res, next) => {
   }
 };
 
-module.exports = { currentInformation, jobHistory };
+module.exports = { employeesInformation, jobHistory };

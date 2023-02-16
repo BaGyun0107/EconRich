@@ -15,8 +15,10 @@ app.use(
 );
 
 const employeesRouter = require("./routes/employees");
+const departmentsRouter = require("./routes/departments");
 
-app.use("/", employeesRouter);
+app.use("/employees", employeesRouter);
+app.use("/departments", departmentsRouter);
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
 
