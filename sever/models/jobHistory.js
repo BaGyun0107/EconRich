@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('job_history', {
+  return sequelize.define('jobHistory', {
     employee_id: {
       type: DataTypes.INTEGER.UNSIGNED,
       allowNull: false,
@@ -35,7 +35,7 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     sequelize,
-    tableName: 'job_history',
+    tableName: 'jobHistory',
     timestamps: false,
     indexes: [
       {

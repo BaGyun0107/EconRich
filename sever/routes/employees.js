@@ -1,8 +1,11 @@
 const express = require("express");
-const { currentInformation } = require("../controllers/employee/employee");
+const {
+  currentInformation,
+  jobHistory,
+} = require("../controllers/employee/employee");
 const router = express.Router();
 
-/* GET home page. */
-router.get("/:id", currentInformation);
+router.get("/currentinformation/:id", currentInformation);
+router.get("/jobHistory/:id", jobHistory);
 
 module.exports = router;

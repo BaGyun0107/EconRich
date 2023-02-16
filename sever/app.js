@@ -14,6 +14,12 @@ app.use(
   })
 );
 
+const employeesRouter = require("./routes/employees");
+
+app.use("/", employeesRouter);
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
+
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Somthing went wrong";
@@ -24,12 +30,6 @@ app.use((err, req, res, next) => {
     stack: err.stack,
   });
 });
-
-const employeesRouter = require("./routes/employees");
-
-app.use("/", employeesRouter);
-
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
 
 const PORT = process.env.HTTP_PORT || 4000;
 
