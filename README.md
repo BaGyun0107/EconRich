@@ -23,9 +23,10 @@
 ## 주의사항
 * [X] 확인 가능한 API 명세서 제공이 필요합니다.
  * swagger를 활용하여 API 명세서를 작성하였습니다.
+ * http://ec2-54-180-156-165.ap-northeast-2.compute.amazonaws.com/swagger
 * [X] AWS 미사용시에도 상시 확인 가능한 URL 공유해 주시면 됩니다
  * AWS EC2로 서버를 창설 후 PM2로 상시 서버를 열어둔 상태입니다.
- * http://ec2-54-180-156-165.ap-northeast-2.compute.amazonaws.com/
+ * http://ec2-54-180-156-165.ap-northeast-2.compute.amazonaws.com
 
 
 ## DB 스키마
