@@ -16,11 +16,13 @@ app.use(
 
 const employeesRouter = require("./routes/employees");
 const departmentsRouter = require("./routes/departments");
+const dataAPIRouter = require("./routes/dataAPI");
 
 app.use("/employees", employeesRouter);
 app.use("/departments", departmentsRouter);
+app.use("/dataapi", dataAPIRouter);
 
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
+app.use("/swagger", swaggerUi.serve, swaggerUi.setup(specs));
 
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;

@@ -61,12 +61,10 @@ const salaryIncrease = async (req, res, next) => {
     try {
       for (let i = 0; i < employees.length; i++) {
         const employee = employees[i];
-        console.log(`연봉확인 : ${employee.salary}`);
         const salary = (
           Number(employee.salary) +
           (employee.salary * increase) / 100
         ).toFixed(2);
-        console.log(`연봉인상확인 : ${salary}`);
         await Models.employees.update(
           { salary: salary },
           { where: { employee_id: employee.employee_id } },
@@ -79,7 +77,9 @@ const salaryIncrease = async (req, res, next) => {
         where: { department_id: id },
       });
 
-      return res.status(200).send({ data: { employees: newEmployees } });
+      return res
+        .status(200)
+        .send({ data: { employees: newEmployees }, message: "급여 인상 성공" });
     } catch (err) {
       await transaction.rollback();
       next(err);
